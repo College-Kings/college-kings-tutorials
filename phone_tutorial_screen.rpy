@@ -5,9 +5,11 @@ screen phone_tutorial():
     default image_path = "gui/tutorial/"
     default page_number = 1
     default tutorial = (
-        "This is your phone. You can access it whenever the phone icon appears in the top right corner.",
-        "New notifications are typically accompanied by a buzzing sound. Currently, you have a new message waiting for you.",
-        "How you reply to messages matters just as much as any other decision."
+        "This is the phone screen. You can access your phone whenever the phone icon in the top right corner appears.",
+        "Blue dots show notifications. New notifications are usually accommpanied by a buzz sound. Currently you have a new message waiting for you.",
+        "How you reply to messages matters just as much as any other decision.",
+        "Over the course of the game you will also unlock all kinds of new apps, such as statistics or social media platforms.",
+        "Lastly, if you ever need to get to the homescreen, just click the bottom border of the phone, or the phone icon."
     )
 
     vbox:
@@ -16,7 +18,7 @@ screen phone_tutorial():
         button:
             xysize (740, 270)
             background "tutorial_background"
-            action Show("confirm", message="Are you sure you want to hide the tutorial?", yes_action=[Hide("confirm"), AddToSet(persistent.hidden_tutorials, "phone_tutorial")])
+            action Show("confirm", message="Are you sure you want to hide the tutorial?", yes_action=[Hide("confirm"), SetDict(persistent.enabled_tutorials, "phone_tutorial", False)])
 
             frame:
                 ysize 220

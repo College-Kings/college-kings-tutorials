@@ -18,7 +18,7 @@ screen fight_preparation_tutorial():
         button:
             xysize (740, 270)
             background "tutorial_background"
-            action Show("confirm", message="Are you sure you want to hide the tutorial?", yes_action=[Hide("confirm"), AddToSet(persistent.hidden_tutorials, "fight_preparation_tutorial")])
+            action Show("confirm", message="Are you sure you want to hide the tutorial?", yes_action=[Hide("confirm"), SetDict(persistent.enabled_tutorials, "fight_preparation_tutorial", False)])
 
             frame:
                 ysize 220

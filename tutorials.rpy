@@ -1,8 +1,7 @@
-default persistent.hidden_tutorials = {
-    "fight_preparation_tutorial": False,
-    "fight_tutorial": False,
-    "free_roam_tutorial": False,
-    "phone_tutorial": False,
-    "reputation_tutorial": False,
+default persistent.enabled_tutorials = {
+    "fight_preparation_tutorial": True,
+    "fight_tutorial": True,
+    "free_roam_tutorial": True,
+    "phone_tutorial": True,
+    "reputation_tutorial": True,
 }
-

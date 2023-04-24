@@ -8,14 +8,14 @@ screen free_roam_tutorial():
         "During free roams, you'll be able to choose where to go, who to interact with and how to interact with them.",
     )
 
-    if renpy.get_screen("free_roam") and "free_roam_tutorial" not in persistent.hidden_tutorials:
+    if renpy.get_screen("free_roam") and persistent.enabled_tutorials["free_roam_tutorial"]:
         vbox:
             ypos 75
 
             button:
                 xysize (740, 270)
                 background "tutorial_background"
-                action Show("confirm", message="Are you sure you want to hide the tutorial?", yes_action=[Hide("confirm"), AddToSet(persistent.hidden_tutorials, "free_roam_tutorial")])
+                action Show("confirm", message="Are you sure you want to hide the tutorial?", yes_action=[Hide("confirm"), SetDict(persistent.enabled_tutorials, "free_roam_tutorial", False)])
 
                 frame:
                     ysize 220
