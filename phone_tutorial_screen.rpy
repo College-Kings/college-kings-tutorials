@@ -18,7 +18,7 @@ screen phone_tutorial():
         button:
             xysize (740, 270)
             background "tutorial_background"
-            action Show("confirm", message="Are you sure you want to hide the tutorial?", yes_action=[Hide("confirm"), SetDict(persistent.enabled_tutorials, "phone_tutorial", False)])
+            action Show("confirm", message="Are you sure you want to hide the tutorial?", yes_action=[Hide("confirm"), SetDict(persistent.enabled_tutorials, "phone_tutorial", False), Hide("phone_tutorial")])
 
             frame:
                 ysize 220
