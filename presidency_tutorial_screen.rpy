@@ -13,7 +13,7 @@ screen presidency_tutorial():
     )
 
     vbox:
-        pos (1150, 730)
+        align (1.0, 0.5)
 
         button:
             xysize (740, 270)
