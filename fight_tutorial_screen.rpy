@@ -25,7 +25,7 @@ screen fight_tutorial():
         ("{u}TIPS:{/u}\n Try out different special attacks and quirks to see which ones you like the most, they can drastically alter your playstyle.", (20, 300)),
     )
 
-    $ tutorial = tutorials[page_number]
+    $ tutorial = tutorials[page_number - 1]
 
     vbox:
         pos tutorial[1]
